@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>注册页</title>
+    <script src="js/consts.js"></script>
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/regist.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <link href="css/swiper.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        #box{height: 140px; border: solid 1px; overflow: hidden;}
+        ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color:#1d4bdf !important;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color:#1d4bdf !important;
+       opacity: 1;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color:#1d4bdf !important;
+       opacity:  1;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color:   #1d4bdf !important;
+        }
+        ::-ms-input-placeholder { /* Microsoft Edge */
+       color:   #1d4bdf !important;
+        }
+        .fqhk{
+            position: absolute;
+            width: 80px;
+            height: 23px;
+            color: #fff;
+            background-color: #e12012;
+            box-shadow: 1px 1px 1px #d52e2b;
+            border-radius: 5px;
+            margin-top: -321px;
+            text-align: center;
+            line-height: 23px;
+            font-size: 15px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+	<div id="bgColor">
+    <div class="banner por">
+        <img src="images/banners.png">
+    </div>
+    <div class="container">
+    <div class="main">
+        <div class="middle" >
+            <div class="dash">
+                <div class="telNumber div">
+                    <dl class="d-webkit">
+                        <dd class="box-flex">
+                            <input class="telTxt" type="text" placeholder="请输入手机号" maxlength="11" validate="n" minLen="11">
+                        </dd>
+                    </dl>
+                </div>
+                <div class="code div d-webkit">
+                    <dl class="d-webkit box-flex">
+                        <dd class="box-flex">
+                            <span class="putCode">
+                                <input class="codeTxt" type="text" placeholder="请输入验证码" maxlength="8" validate="n" minLen="2">
+                            </span>
+                        </dd>
+                        <span class="diver"></span>
+                        <dd> <button class="getCode getCode2" onclick="settime()">获取验证码</button></dd>
+                    </dl>
+                </div>
+                <div class="application">
+                    <div class='applicationBtn' style="margin-top: 40px">
+                        <div class="registBtn">立即注册</div>
+                    </div>
+                </div> 
+                <div class="agreen">
+                    <input type="checkbox" id="agree" checked>
+                    <label for="agree">
+                        <span class="reader" style="color: #999">我已阅读并同意</span>
+                    </label>
+                    <span class="protocol">
+                        <a id="agreement">《用户服务协议》</a>
+                    </span>
+                   
+                    <!-- <span class="protocol">
+                        <a id="agreements" style="display: block;margin-top: 5px">《隐私权政策》</a>
+                    </span> -->
+                </div>
+            </div>
+        </div>
+        <img style="margin-top: -60px;" src="images/bottom.png">
+        <div class="bah">粤ICP备19151608</div>
+    </div></div>
+    <!-- <div class="success hide">
+        <div class="pof">
+            <img src="images/alert_bg.png" class="bg" alt="">
+            <img style="margin-top: 50%;" src="images/alert_bg.png" alt="" class="iosGuide">
+        </div>
+        <ul>
+            <li>
+                <a href="./ios.html" class="fr" >
+                    <div class="iosBtn"><img style="margin-top: 5%;margin-right: 5px;" src="./images/pg1.png" />IOS下载</div>
+                </a>
+            </li>
+            <li>
+                <a href="./android.html" class="fl" >
+                    <div class="androidBtn"> <img style="margin-top: 5%;margin-right: 5px;" src="./images/az123.png" />安卓下载</div>
+                </a>
+            </li>
+        </ul>
+    </div> -->
+	</div>  
+    <div class="layer hide"></div>
+    <div class="layer2 hide"></div> 
+     <script language="javascript" type="text/javascript">
+        window.onload=function(){ 
+        var agreement = document.getElementById('agreement');
+        agreement.setAttribute('href', serverUrl+'/h5/shhAgree.html');
+        var agreements = document.getElementById('agreements');
+        agreements.setAttribute('href', serverUrl+'/h5/hxzc.html');
+        document.title = appName + '注册页';
+        document.getElementById('appName').innerHTML = appName;
+        // var iosDownload = document.getElementById('iosDownload');
+        // iosDownload.setAttribute('href', iosAddress);
+        // var androidDownload = document.getElementById('androidDownload');
+        // androidDownload.setAttribute('href', androidAddress);
+        // document.getElementById('iosDownload').setAttribute('href', iosAddress);
+        // document.getElementById('androidDownload').setAttribute('href', androidAddress);
+                }
+
+		
+				// var speed=50
+				// gg1.innerHTML=gg2.innerHTML
+				// function Marquee(){
+				// if(gg2.offsetTop-ggg.scrollTop<=0)
+				// ggg.scrollTop-=gg1.offsetHeight
+				// else{
+				// ggg.scrollTop++
+				// }
+				// }
+				// var MyMar=setInterval(Marquee,speed)
+				// ggg.onmouseover=function() {clearInterval(MyMar)}
+                // ggg.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+              
+        document.getElementById('iosDownload').setAttribute('href', iosAddress);
+        document.getElementById('androidDownload').setAttribute('href', androidAddress);
+
+
+    </script> 
+</body>
+
+</html>
